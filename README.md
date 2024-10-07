@@ -4,7 +4,9 @@
 <h1>WeatherMini</h1>
 
 This is WeatherMini, a mini e-ink weather station that displays the current weather condition with air quality index and 2 day forcasts. Currently, only 2.9inches eink screens and b/w are supported.
+
 Colored eink display can be used in thoery (bwr/ bwy/ 4color), but they have not been tested as I do not have any 2.9inches color eink with me. However, please note that they take longer to refresh.
+
 The project uses Hong Kong Observatory Open Data API for weather data, as well as RSS from Hong Kong Enviromental Protection Department for the AQHI, so can be used in Hong Kong only. No sign up is required as of the time of this project.
 
 
@@ -48,10 +50,6 @@ Note that while this project is written to also support 3 and 4 color display, t
 **Microcontroller board:**
 The ESP32-C3 is used to keep costs down and to keep things tiny: 
 - ESP32-C3 SuperMini: You can get these for like $2USD each, there are all sort of brands out there since it seem to be open-sourced? But you have to add external charging circuit. Do get the one with 4mb on board flash.
-  OR
-- Xiao-ESP32-C3 by Seeed Studio: $4.99 USD or 3 pieces for $13.49 with free shipping (https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html):
-  This board is even more compact and comes with on board charging circuit, with external antenna. Downside is it is more expensive, and it has fewer pins available.
-
   
 **The ESP32-C3 uses slightly different deep sleep functions than the other ESP32 variants, so if you decide to use other boards, you need to adjust the pins and the code accordingly.
 
@@ -60,19 +58,63 @@ The ESP32-C3 is used to keep costs down and to keep things tiny:
 - e.g. DESPI-C02: - USD $6.99 on their official website/ CNY 30 on taobao
 You need an adaptor board to connect the eink screen to your ESP32. There are other brands out there, some options are cheaper and they come in different forms, above is just a suggestion and is the one used in this tutorial. 
 
-If you are using Xiao-ESP32-C3, there is a breakout board available for $3.95 USD
-(https://www.seeedstudio.com/ePaper-Breakout-Board-p-5804.html)
 
 
+**Optional Parts**
+This is more complicated and 
 
+**Battery Charging Circuit and Lithium Battery (Optional)**
+
+**470k ohm resistors x 2 (Optional)**
+
+**0.1uF capacitor x 1 (Optional)**
+
+**Push Button x 2 (Optional)** 
+Any you want to use.
+
+**Switch x 1 (Optional)**
+Any you want to use.
 
 **Others:**
-You will also need your soldering tools/ materials.
+You will also need your soldering tools/ materials (wires/ protoboard etc).
 I also suggest getting FFC cables and connectors (24pin / 0.5mm) so you have more flexibility with your screen and your board since the FPC cable on the display is fairly short.
 
 
 
+
+<h2>Connecting the wires:</h2>
+
+- DESPI-C02 ->	ESP32-C3 SuperMini:
+
+- BUSY	->	14
+
+- RES	->	9
+
+- D/C	->	1
+
+- CS	->	18
+
+- SCK	->	23
+
+- SDI	->	22
+
+- GND	->	GND 
+
+- 3V3	->	3V3
+
+
+**Do not feed 5V to the display, most of them operates at 3V3**
+
+Then connect the screen to the connector on the board. Pay attention to the orientation of the screen, usually both the display and the adaptor board should be facing up , but this might be the opposite for some adaptor boards. If screen doesn't work, try the other way round.
+
+**Optional Parts - Battery with charging, **
+
+Charging circuit and lithium battery. In this example I use TP4056 module for simplicity. The BAT OUT+ goes to 5V pin of the ESP32-C3, connect a 
+
+
+
 *******
+
 
 <h2>Software Installation: </h2>
 (You may skip this if you know what you are doing)
@@ -93,8 +135,6 @@ ArduinoJson by bblanchon: https://github.com/bblanchon/ArduinoJson
 
 GxEPD2 by ZinggJM: https://github.com/ZinggJM/GxEPD2
 
-(and GxEPD2_4G if you are using b/w display: https://github.com/ZinggJM/GxEPD2_4G)
-
 u8g2 fonts by olikraus: https://github.com/olikraus/u8g2
 
 Adafruit_GFX by Adafruit: https://github.com/adafruit/Adafruit-GFX-Library
@@ -102,36 +142,13 @@ Adafruit_GFX by Adafruit: https://github.com/adafruit/Adafruit-GFX-Library
 
 
 
-<h2>Connecting the wires:</h2>
 
-- DESPI-C02 ->	ESP32-C6:
-
-- BUSY	->	14
-
-- RES	->	9
-
-- D/C	->	1
-
-- CS	->	18
-
-- SCK	->	23
-
-- SDI	->	22
-
-- GND	->	GND 
-
-- 3V3	->	3V3
-
-(There are two GND and 3V3 on the Firebeetle ESP32-C6, either ones will work.
-**Do not feed 5V to the display, most of them operates at 3V3**
-
-Then connect the screen to the connector on the board. Pay attention to the orientation of the screen, usually both the display and the adaptor board should be facing up , but this might be the opposite for some adaptor boards. If screen doesn't work, try the other way round.
 
 
 - Download the code on this project's main page, (click on <> code -> Download ZIP). 
 ![download](https://github.com/user-attachments/assets/1ea66c3d-8c26-47a8-86db-87f056e0b4fb)
 
-Extract the zip files and open Weather_Postcard.ino in Arduino IDE, select your board and upload. It will take a while for the code to compile for the first time so please be patient.
+Extract the zip files and open Weather_Postcard.ino in Arduino IDE, change the configuration settings as described in the section below, select your board and upload. It will take a while for the code to compile for the first time so please be patient.
 
 
 <h2>Configuable settings:</h2>
