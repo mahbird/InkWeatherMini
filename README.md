@@ -60,20 +60,11 @@ You need an adaptor board to connect the eink screen to your ESP32. There are ot
 
 
 
-**Optional Parts**
-This is more complicated and 
-
-**Battery Charging Circuit and Lithium Battery (Optional)**
-
-**470k ohm resistors x 2 (Optional)**
-
-**0.1uF capacitor x 1 (Optional)**
 
 **Push Button x 2 (Optional)** 
 Any you want to use.
 
-**Switch x 1 (Optional)**
-Any you want to use.
+
 
 **Others:**
 You will also need your soldering tools/ materials (wires/ protoboard etc).
