@@ -1,6 +1,6 @@
 {
   "version": "1.2",
   "updatemessage_tc": "測試用",
-  "updatemessage_en": "This is a test message to be displayed"
+  "updatemessage_en": "This is a test message to be displayed",
   "firmwareURL": "https://raw.githubusercontent.com/mahbird/InkWeatherMini/refs/heads/main/Update/blink_test.ino.bin"
 }
