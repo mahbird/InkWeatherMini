@@ -40,15 +40,12 @@ You can always manually press RST on your ESP32 to get data instantly.
 <h2>Materials needed: </h2>
 
 **Verions explained**
-A .bin version is provided
-
-
+A .bin version is provided or you can use the source version to hardcode values for simplicity and more flexibility. 
 
 
 
 I do not recevie any form of rebate from the manufacturer(s), you are free to try out different ones.
-<p>
-<img src="https://github.com/user-attachments/assets/61679cf7-91b8-4f46-968a-c884e56e1c70" height=400px></p>
+
 
 
 **E-ink screen:**
