@@ -23,7 +23,7 @@ Flickering on screen refreshes is, unfortunately, normal for e-ink as far as the
 
 
 
-WeatherMini Explained</h2>
+<h2>WeatherMini Explained</h2>
 <p>
 
 
@@ -38,32 +38,42 @@ You can always manually press RST on your ESP32 to get data instantly.
 
 
 <h2>Materials needed: </h2>
-(Prices are the displayed price as of time of this post (1 Sep, 2024),  for reference only , excludes shipping / discounts). I do not recevie any form of rebate from the manufacturer(s), you are free to try out different ones.
+
+**Verions explained**
+A .bin version is provided
+
+
+
+
+
+I do not recevie any form of rebate from the manufacturer(s), you are free to try out different ones.
 <p>
 <img src="https://github.com/user-attachments/assets/61679cf7-91b8-4f46-968a-c884e56e1c70" height=400px></p>
 
 
 **E-ink screen:**
 - Any 2.9inches eink display with a resolution of 128x296 that are supported by <a href="https://github.com/ZinggJM/GxEPD2">GxEPD2</a> should do.
-Note that while this project is written to also support 3 and 4 color display, they have not been tested.
+- This have been tested on B/W display only.
+- Note that while this project is written to also support 3 and 4 color display, they have not been tested.
+
 
 **Microcontroller board:**
 The ESP32-C3 is used to keep costs down and to keep things tiny: 
 - ESP32-C3 SuperMini: You can get these for like $2USD each, there are all sort of brands out there since it seem to be open-sourced? But you have to add external charging circuit. Do get the one with 4mb on board flash.
   
-**The ESP32-C3 uses slightly different deep sleep functions than the other ESP32 variants, so if you decide to use other boards, you need to adjust the pins and the code accordingly.
+**The ESP32-C3 uses slightly different deep sleep wake up functions than the other ESP32 variants, so if you decide to use other boards and intended to use webserver, you need to define the pins and the code accordingly. See software settings section.
+If you want it to be battery powered, either pick a board with on-board charging circuit or add your own. Always check manufacturers' datasheets carefully!
+The code supports ADC battery voltage reading (if #define batterypin /*pin_number*/), but you would probably want to adjust the voltage/charge% values since batteries are all different.
+
 
 
 **E-ink adaptor board:**
-- e.g. DESPI-C02: - USD $6.99 on their official website/ CNY 30 on taobao
+- e.g. DESPI-C02
 You need an adaptor board to connect the eink screen to your ESP32. There are other brands out there, some options are cheaper and they come in different forms, above is just a suggestion and is the one used in this tutorial. 
 
 
-
-
-**Push Button x 2 (Optional)** 
-Any you want to use.
-
+**Push button x 1:**
+Choose any you like. Compulsory if you want to load the .bin file directly, optional if you choose to hardcode configurations directly in the code.
 
 
 **Others:**
@@ -93,14 +103,13 @@ I also suggest getting FFC cables and connectors (24pin / 0.5mm) so you have mor
 
 - 3V3	->	3V3
 
+**Push button**
+One leg to buttonpin (3 for the .bin version), another to 3V3
 
 **Do not feed 5V to the display, most of them operates at 3V3**
 
 Then connect the screen to the connector on the board. Pay attention to the orientation of the screen, usually both the display and the adaptor board should be facing up , but this might be the opposite for some adaptor boards. If screen doesn't work, try the other way round.
 
-**Optional Parts - Battery with charging, **
-
-Charging circuit and lithium battery. In this example I use TP4056 module for simplicity. The BAT OUT+ goes to 5V pin of the ESP32-C3, connect a 
 
 
 
@@ -114,37 +123,11 @@ Software:
 - Install Arduino IDE:
 https://www.arduino.cc/en/software
 
-Arduino IDE 2.3.2 is the last version at the time of this project which is the version being used. Choose the appropiate option depending on your OS.
-
-
-- Install the Firebeetle 2 ESP32-C6 board in arduino: (Or relevent boards if you are using others)
-https://wiki.dfrobot.com/SKU_DFR1075_FireBeetle_2_Board_ESP32_C6#target_5
-
-- Install the following libraries:
-
-ArduinoJson by bblanchon: https://github.com/bblanchon/ArduinoJson
-
-GxEPD2 by ZinggJM: https://github.com/ZinggJM/GxEPD2
-
-u8g2 fonts by olikraus: https://github.com/olikraus/u8g2
-
-Adafruit_GFX by Adafruit: https://github.com/adafruit/Adafruit-GFX-Library
-
-
-
-
-
-
-
-- Download the code on this project's main page, (click on <> code -> Download ZIP). 
-![download](https://github.com/user-attachments/assets/1ea66c3d-8c26-47a8-86db-87f056e0b4fb)
-
-Extract the zip files and open Weather_Postcard.ino in Arduino IDE, change the configuration settings as described in the section below, select your board and upload. It will take a while for the code to compile for the first time so please be patient.
-
+**PLACEHOLDER TO BE ADDED LATER**
 
 <h2>Configuable settings:</h2>
 
-**configurations.h**
+**configurations.cpp**
 
 Settings with info are found in the header file "configurations.h"
 
@@ -166,10 +149,6 @@ Settings with info are found in the header file "configurations.h"
 
 - rainlocation: Location of where the rainfall of last hour is displayed. Please refer to "locations.h" for the list of avaiable locations. 
 
-- customtext: Any text you would like to display on the last line, though it can't show too many!
-
-- time24h: Display the last update time in 24h or a.m./p.m.
-
 - batterypin / nobattery: whether you are using ADCbatteryread, no need to change if you are using Firebeetle ESP32-C6
 
 
@@ -186,7 +165,7 @@ If you are using other microcontroller boards, you need to define your own pins.
 
 ********
 
-This is my first project on github, if you notice anything wrong with the code, let me know, thank you.
+If you notice anything wrong with the code, let me know, thank you.
 
 ********
 
@@ -204,6 +183,7 @@ Please note that the weather informations are taken from the publicly available 
 
 
 
+Credits:
 
 Special thanks to the developer for the libraries (and the associated libararies in the libraries) used in this project:
 
@@ -216,6 +196,3 @@ u8g2 fonts by olikraus: https://github.com/olikraus/u8g2
 Adafruit_GFX by Adafruit: https://github.com/adafruit/Adafruit-GFX-Library
 
 
-The project is designed to use with ESP32-C3 SuperMini, due to its small form factor, low price and availablity.
-
-Eink
