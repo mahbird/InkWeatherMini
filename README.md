@@ -1,13 +1,16 @@
 **WIP**
 
 
-<h1>WeatherMini</h1>
+<h1>InkWeatherMini</h1>
 
 This is WeatherMini, a mini e-ink weather station that displays the current weather condition with air quality index and 2 day forcasts. Currently, only 2.9inches eink screens and b/w are supported.
 
 Colored eink display can be used in thoery (bwr/ bwy/ 4color), but they have not been tested as I do not have any 2.9inches color eink with me. However, please note that they take longer to refresh.
 
 The project uses Hong Kong Observatory Open Data API for weather data, as well as RSS from Hong Kong Enviromental Protection Department for the AQHI, so can be used in Hong Kong only. No sign up is required as of the time of this project.
+
+InkWeatherMini does not collect your data in any form, your configuration data are only stored locally in your device. All interactions are limited to the required API calls directly made to HKO, EPD and NTP server to get the weather information and local time.
+
 
 
 
@@ -38,20 +41,29 @@ You can always manually press RST on your ESP32 to get data instantly.
 
 
 <h2>Materials needed: </h2>
+I do not recevie any form of rebate from the manufacturer(s), you are free to try out different ones.
+
 
 **Verions explained**
-A .bin version is provided or you can use the source version to hardcode values for simplicity and more flexibility. 
+Two versions are provided, choose the one base on your need.
+
+**- Source code version: More flexibility *requires basic Arduino knowledge***, you are free to tweak the code to your liking (but please don't redistribute them). You can use other panels that are supported by GxEPD2.
+You can also use other ESP32 board.  Configurations are hardcoded in confirgurations.cpp and display_config.h
+(Coming soon! The code still needs a proper clean up and refine for readibility)
 
 
+**- bin version: For end user.**
+The .bin supports only b/w display and includes async web server which allows changing configs via browser and web OTA. 
+You have to use b/w display with the SSD1680 I/C (e.g. GDEY029T94 from Good-display) and ESP32-C3 SuperMini with a push button and connect exactly in this tutorial.
 
-I do not recevie any form of rebate from the manufacturer(s), you are free to try out different ones.
+
 
 
 
 **E-ink screen:**
 - Any 2.9inches eink display with a resolution of 128x296 that are supported by <a href="https://github.com/ZinggJM/GxEPD2">GxEPD2</a> should do.
 - This have been tested on B/W display only.
-- Note that while this project is written to also support 3 and 4 color display, they have not been tested.
+- Note that while this project is written to also support color display, but they have not been tested.
 
 
 **Microcontroller board:**
@@ -66,8 +78,8 @@ The code supports ADC battery voltage reading (if #define batterypin /*pin_numbe
 
 **E-ink adaptor board:**
 - e.g. DESPI-C02
-You need an adaptor board to connect the eink screen to your ESP32. There are other brands out there, some options are cheaper and they come in different forms, above is just a suggestion and is the one used in this tutorial. 
-
+You need an adaptor board to connect the eink screen to your ESP32. There are other brands out there, some options are cheaper and they come in different forms.
+You can choose any you like, the DESPI-C02 is just an example.
 
 **Push button x 1:**
 Choose any you like. Compulsory if you want to load the .bin file directly, optional if you choose to hardcode configurations directly in the code.
@@ -99,6 +111,7 @@ I also suggest getting FFC cables and connectors (24pin / 0.5mm) so you have mor
 - GND	->	GND 
 
 - 3V3	->	3V3
+
 
 **Push button**
 One leg to buttonpin (3 for the .bin version), another to 3V3
@@ -146,18 +159,14 @@ Settings with info are found in the header file "configurations.h"
 
 - rainlocation: Location of where the rainfall of last hour is displayed. Please refer to "locations.h" for the list of avaiable locations. 
 
-- batterypin / nobattery: whether you are using ADCbatteryread, no need to change if you are using Firebeetle ESP32-C6
+- batterypin: assign the ADC pin to read battery voltage, simply comment// this line if not needed. You may also need to change the voltage to % level depending on the voltage divider and the type of battery you are using.
 
 
 **Display Configurations:**
 
 Configuration for the display is in "displayconfig.h"
 
-The default setting is for Firebeetle ESP32-C6 with the 4 color E-Ink display, no need to change anything if you are are using the said combination.
-
-If you are using b/w display with the Firebeetle ESP32-C6, add "//" before #define display_4C and delete the "//" before #define display_BW (There is also display_3C for B/W/R display if you have old panels that you want to use, but it will be missing the yellow colors)
-
-If you are using other microcontroller boards, you need to define your own pins. 
+Choose the correct display and display class for your eink panel, and define the pins you use.
 
 
 ********
@@ -167,22 +176,10 @@ If you notice anything wrong with the code, let me know, thank you.
 ********
 
 
-本天氣明信片以及圖示均為mahbird基於香港天文台的免費資訊制作及繪畫，於Arduino IDE 2.3.2編寫，並於github免費發佈，僅供個人使用，
-轉載需保留原訊息，不得用於其他地方，可按需要自行修改但不得作二次發佈，不得用於商業用途。
-本程序基於香港天文台的免費API (https://www.hko.gov.hk/tc/weatherAPI/doc/files/HKO_Open_Data_API_Documentation_tc.pdf) (Version 1.11, Date : Nov, 2023)
-如未來API有變更，可能令本程序不相容
 
-The Weather postcard and all icons are created and drawn by mahbird on Github, written in Arduino IDE 2.3.2, based on information available from the Hong Kong Observatory. 
+Credits: 
 
-The code is distributed for free on github. For personal use only. Please retain all original messages when posting on other sites. You are free to modify this code as you like, but do not redistribute modified code and do not use them elsewhere. Commerical use is not allowed.
-
-Please note that the weather informations are taken from the publicly available Hong Kong Observatory Open Data API (https://www.hko.gov.hk/en/weatherAPI/doc/files/HKO_Open_Data_API_Documentation.pdf) (Version 1.11, Date : Nov, 2023). It it possible that this software may not be compatiable if the API changed in the future.
-
-
-
-Credits:
-
-Special thanks to the developer for the libraries (and the associated libararies in the libraries) used in this project:
+Special thanks (and the associated resources the libaries used):
 
 ArduinoJson by bblanchon: https://github.com/bblanchon/ArduinoJson
 
@@ -192,4 +189,9 @@ u8g2 fonts by olikraus: https://github.com/olikraus/u8g2
 
 Adafruit_GFX by Adafruit: https://github.com/adafruit/Adafruit-GFX-Library
 
+ESPAsyncWebServer/ AsyncTCP by me-no-dev: https://github.com/me-no-dev/ESPAsyncWebServer / https://github.com/me-no-dev/AsyncTCP
+
+Fonts used:
+Spleen by fcambus: https://github.com/fcambus/spleen
+open-huninn-font: https://github.com/justfont/open-huninn-font
 
