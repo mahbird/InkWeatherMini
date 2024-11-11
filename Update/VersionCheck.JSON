@@ -1,6 +1,6 @@
 {
-  "version": "1.2",
+  "version": "1.1",
   "updatemessage_tc": "測試用",
-  "updatemessage_en": "This is a test message to be displayed",
-  "firmwareURL": "https://raw.githubusercontent.com/mahbird/InkWeatherMini/refs/heads/main/Update/WeatherMini_autoupdate.ino.bin"
+  "updatemessage_en": "This is a test message to be displayed \nAdded min max RH",
+  "firmwareURL": "https://raw.githubusercontent.com/mahbird/InkWeatherMini/refs/heads/main/Update/WeatherMini_1.1_update.bin"
 }
