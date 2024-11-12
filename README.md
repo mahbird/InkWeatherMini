@@ -84,6 +84,13 @@ You can choose any you like, the DESPI-C02 is just an example.
 **Push button x 1:**
 Choose any you like. Compulsory if you want to load the .bin file directly, optional if you choose to hardcode configurations directly in the code.
 
+**Resistor x 2, capacitor x 1, Lithium battery, charging circuit: (Optional)**
+Only if you want to use lithium battery to run your device and if you know what you are doing. I am not going to go through this in details.
+If you don't know what you are going, just power the device using 5V input to ESP32C3's USB port.
+I personally use 2x 1MOhm resistor with 1nF capacitor, not super accurate but gives an idea of battery charge.
+TP4056 is probably the easiest to work with.
+Battery icon will be shown in bottom left if valid voltage is read.
+
 
 **Others:**
 You will also need your soldering tools/ materials (wires/ protoboard etc).
@@ -94,19 +101,20 @@ I also suggest getting FFC cables and connectors (24pin / 0.5mm) so you have mor
 
 <h2>Connecting the wires:</h2>
 
-- DESPI-C02 ->	ESP32-C3 SuperMini:
+**Do not feed 5V to the display, most of them operates at 3V3**
+- DESPI-C02 ->	ESP32-C3 SuperMini: (Or follow the silkscreen on your adaptor board)
 
-- BUSY	->	14
+- BUSY	->	5
 
-- RES	->	9
+- RES	-> 0
 
-- D/C	->	1
+- D/C	->	10
 
-- CS	->	18
+- CS	->	7
 
-- SCK	->	23
+- SCK	->	4
 
-- SDI	->	22
+- SDI	->	6
 
 - GND	->	GND 
 
@@ -114,9 +122,9 @@ I also suggest getting FFC cables and connectors (24pin / 0.5mm) so you have mor
 
 
 **Push button**
-One leg to buttonpin (3 for the .bin version), another to 3V3
+One leg to buttonpin (3 for the .bin version), the other to 3V3
 
-**Do not feed 5V to the display, most of them operates at 3V3**
+
 
 Then connect the screen to the connector on the board. Pay attention to the orientation of the screen, usually both the display and the adaptor board should be facing up , but this might be the opposite for some adaptor boards. If screen doesn't work, try the other way round.
 
@@ -159,7 +167,7 @@ Settings with info are found in the header file "configurations.h"
 
 - rainlocation: Location of where the rainfall of last hour is displayed. Please refer to "locations.h" for the list of avaiable locations. 
 
-- batterypin: assign the ADC pin to read battery voltage, simply comment// this line if not needed. You may also need to change the voltage to % level depending on the voltage divider and the type of battery you are using.
+- batterypin: assign the ADC pin to read battery voltage, simply comment// this line if not needed. You may also want to change the voltage to % level depending on the voltage divider and the type of battery you are using.
 
 
 **Display Configurations:**
@@ -171,7 +179,7 @@ Choose the correct display and display class for your eink panel, and define the
 
 ********
 
-If you notice anything wrong with the code, let me know, thank you.
+If you notice anything wrong with the code or have any suggestions, just let me know, thank you.
 
 ********
 
@@ -179,7 +187,7 @@ If you notice anything wrong with the code, let me know, thank you.
 
 Credits: 
 
-Special thanks (and the associated resources the libaries used):
+These are the libaries and resources used in this project:
 
 ArduinoJson by bblanchon: https://github.com/bblanchon/ArduinoJson
 
@@ -195,3 +203,4 @@ Fonts used:
 Spleen by fcambus: https://github.com/fcambus/spleen
 open-huninn-font: https://github.com/justfont/open-huninn-font
 
+Font converter: https://rop.nl/truetype2gfx/
