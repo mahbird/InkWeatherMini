@@ -1,7 +1,7 @@
 **介面**
 
 
-<img src="images/info.jpg"></img>
+![info]](Images/info.jpg)
 
 
 
@@ -11,7 +11,7 @@
 
 充電中會亮紅燈，充滿電後亮藍燈
 
-![charging]](images/charging.jpg)
+![charging]](Images/charging.jpg)
 
 **EINK屏刷新中會閃爍數次，屬正常現象**
 
@@ -22,13 +22,13 @@
 
 首次設定:
 
-![newscreen]](images/newscreen.jpg)
+![newscreen]](Images/newscreen.jpg)
 
 (初始畫面)
 
 1. 短按鍵0，會顯示以下畫面 (如畫面沒有刷新，請將InkWeatherMini充電)
 
-![softAP](images/softAP.jpg)
+![softAP](Images/softAP.jpg)
 
 2. 到你的電腦或手機上WIFI連接設定，搜尋網路，點撃"InkWeatherMini"並連接
 
@@ -37,7 +37,7 @@
 - 輸入你的WIFI名稱和密碼 (區分大小寫)，按需求更改其他設定，確定保存後
 
 
-![softAPweb](images/softAPweb.jpg)
+![softAPweb](Images/softAPweb.jpg)
 
 (設定頁面 (softAP)，版本1.0)
 
@@ -48,7 +48,7 @@ WiFi穩定時需時約15秒以下，成功取得攻氣後畫面將自動刷新
 
 **工作指示燈:**
 
-![WorkingLED](images/WorkingLED.jpg)
+![WorkingLED](Images/WorkingLED.jpg)
 
 - 快閃(0.5s) : InkWeatherMini正在嘗試連接到WIFI
 
@@ -61,18 +61,18 @@ WiFi穩定時需時約15秒以下，成功取得攻氣後畫面將自動刷新
 
 1.如要再次更改設定，在工作指示燈沒有亮起的時間短按鍵0，會顯示以下畫面:
 
-![selectscreen](images/selectscreen.jpg)
+![selectscreen](Images/selectscreen.jpg)
 
 2. 如只需要更改返定，請短按鍵0，InkWeatherMini會連到WIFI，並會顯示以下畫面
 
 如需更改WIFI，長按鍵0，依照首次設定的方式設定
 
-![wifi](images/wifi.jpg)
+![wifi](Images/wifi.jpg)
 
 3.在電腦或手機上的瀏覽器 (請確保和InkWeatherMini使用同一個網路)，前往畫面上顯示的網址
 
 
-![wifiweb](images/wifiweb.jpg)
+![wifiweb](Images/wifiweb.jpg)
 
 (設定頁面 (WiFi)，版本1.0)
 
