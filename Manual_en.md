@@ -7,6 +7,7 @@
 
 You can use any usb charger that are rated at 5V, that is rated at 1A or higher, or just your computer's USB port.
 When charging, LED will be red; when charging is finished, LED will be blue
+
 ![charging](Images/charging.jpg)
 
 **The Eink Screen will flicker when refreshing, which is normal**
@@ -20,7 +21,7 @@ https://github.com/user-attachments/assets/db4f93c9-d7ad-4574-b56d-e51dda1d723f
 
 Initial Set Up:
 
-![newscreen](/Images/newscreen.jpg)
+![newscreen](Images/newscreen.jpg)
 
 (Initial Screen)
 
