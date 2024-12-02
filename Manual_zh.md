@@ -1,7 +1,7 @@
 **介面**
 
 
-![info]](Images/info.jpg)
+![info](Images/info.jpg)
 
 
 
@@ -22,7 +22,7 @@
 
 首次設定:
 
-![newscreen]](Images/newscreen.jpg)
+![newscreen](Images/newscreen.jpg)
 
 (初始畫面)
 
