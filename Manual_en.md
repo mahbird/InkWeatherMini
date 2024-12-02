@@ -33,7 +33,7 @@ Initial Set Up:
 
 
 
-![softAPweb](images/softAPweb.jpg)
+![softAPweb](images/softAPweb_en.jpg)
 
 (Setting page (softAP), version 1.0)
 
@@ -70,7 +70,7 @@ Long press 0 if you need to change WiFi credentials, follow the instruction on i
 
 3. Using your phone or computer's web browser, go to the displayed URL shown on the InkWeatherMini. (Ensure that both devices are using the same network). 
 
-![wifiweb](images/wifiweb.jpg)
+![wifiweb](images/wifiweb_en.jpg)
 
 (Setting page (WiFi), version 1.0)
 
