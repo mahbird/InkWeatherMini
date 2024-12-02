@@ -1,4 +1,6 @@
 **Information**
+
+
 ![info]](images/info.jpg)
 
 **Please charge using 5V 1A, QC/ PD is not supported**

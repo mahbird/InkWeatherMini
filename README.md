@@ -1,4 +1,4 @@
-#InkWeatherMini
+<h>InkWeatherMini</h>
 
 **If you already own an InkWeatherMini, click to go to the [English Manual](Manual_en.md)**
 
@@ -9,7 +9,7 @@ Table of Content
 
 
 
-##Introduction
+<h1>## Introduction</h1>
 
 This is WeatherMini, a mini e-ink weather station that displays the current weather condition with air quality index and 2 day forcasts. Currently, only 2.9inches eink screens and b/w are supported.
 
@@ -32,7 +32,7 @@ Flickering on screen refreshes is, unfortunately, normal for e-ink as far as the
 *****
 
 
-##How it works
+<h1>##How it works<h1>
 
 <p>
 
@@ -203,7 +203,7 @@ If you notice anything wrong with the code or have any suggestions, just let me 
 
 
 
-##Credits: 
+<h1>##Credits: </h1>
 
 These are the libaries and resources used in this project:
 
@@ -225,8 +225,10 @@ Font converter: https://rop.nl/truetype2gfx/
 
 
 Data service provider:
-Weather data: https://www.hko.gov.hk/en/weatherAPI/doc/files/HKO_Open_Data_API_Documentation.pdf (according to documentation version 1.2)
+<br>Weather data: https://www.hko.gov.hk/en/weatherAPI/doc/files/HKO_Open_Data_API_Documentation.pdf (according to documentation version 1.2)
 AQI: https://www.aqhi.gov.hk/psi/dd/hk_aqhiforecast_tc.pdf
 NTP: time.nist.gov, pool.ntp.org, stdtime.gov.hk, time.google.com
 
 ##[License](License)
+
+All 
