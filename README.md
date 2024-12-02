@@ -32,7 +32,7 @@ Flickering on screen refreshes is, unfortunately, normal for e-ink as far as the
 *****
 
 
-<h1>##How it works<h1>
+<h1>##How it works</h1>
 
 <p>
 
