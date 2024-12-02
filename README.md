@@ -1,17 +1,25 @@
-**WIP**
+#InkWeatherMini
+
+**If you already own an InkWeatherMini, click to go to the [English Manual](Manual_en.md)**
+
+**如你已擁有InkWeatherMini，可以前往[中文使用說明](Manual_zh.md)**
 
 
-<h1>InkWeatherMini</h1>
+Table of Content
+
+
+
+##Introduction
 
 This is WeatherMini, a mini e-ink weather station that displays the current weather condition with air quality index and 2 day forcasts. Currently, only 2.9inches eink screens and b/w are supported.
 
+
+<!--
 Colored eink display can be used in thoery (bwr/ bwy/ 4color), but they have not been tested as I do not have any 2.9inches color eink with me. However, please note that they take longer to refresh.
 
-The project uses Hong Kong Observatory Open Data API for weather data, as well as RSS from Hong Kong Enviromental Protection Department for the AQHI, so can be used in Hong Kong only. No sign up is required as of the time of this project.
+The project uses Hong Kong Observatory Open Data API for weather data, as well as RSS from Hong Kong Enviromental Protection Department for the AQHI, so can be used in Hong Kong only. No sign up is required as of the time of this project. -->
 
 InkWeatherMini does not collect your data in any form, your configuration data are only stored locally in your device. All interactions are limited to the required API calls directly made to HKO, EPD and NTP server to get the weather information and local time.
-
-
 
 
 **Why e-ink?**  E-ink displays can kept its last displayed content without power supply, so the device is in deep sleep mode between readings intervals. It only wakes up for around ~30-60s on each update (to connect to wifi to fetch NTP and weather data and then 20s for refreshing the screen). It can be viewed under bright light. Depending on the battery and update interval you choose, it will last months without needing to be charged.
@@ -24,9 +32,8 @@ Flickering on screen refreshes is, unfortunately, normal for e-ink as far as the
 *****
 
 
+##How it works
 
-
-<h2>WeatherMini Explained</h2>
 <p>
 
 
@@ -39,6 +46,15 @@ The display is set to update at around 5 minutes pass each hour, since it will o
 
 You can always manually press RST on your ESP32 to get data instantly.
 
+
+
+##Building your own InkWeatherMini
+
+WIP, please stay tuned!
+
+<!--
+
+WIP
 
 <h2>Materials needed: </h2>
 I do not recevie any form of rebate from the manufacturer(s), you are free to try out different ones.
@@ -176,6 +192,8 @@ Configuration for the display is in "displayconfig.h"
 
 Choose the correct display and display class for your eink panel, and define the pins you use.
 
+-->
+
 
 ********
 
@@ -185,7 +203,7 @@ If you notice anything wrong with the code or have any suggestions, just let me 
 
 
 
-Credits: 
+##Credits: 
 
 These are the libaries and resources used in this project:
 
@@ -204,3 +222,11 @@ Spleen by fcambus: https://github.com/fcambus/spleen
 open-huninn-font: https://github.com/justfont/open-huninn-font
 
 Font converter: https://rop.nl/truetype2gfx/
+
+
+Data service provider:
+Weather data: https://www.hko.gov.hk/en/weatherAPI/doc/files/HKO_Open_Data_API_Documentation.pdf (according to documentation version 1.2)
+AQI: https://www.aqhi.gov.hk/psi/dd/hk_aqhiforecast_tc.pdf
+NTP: time.nist.gov, pool.ntp.org, stdtime.gov.hk, time.google.com
+
+##[License](License)

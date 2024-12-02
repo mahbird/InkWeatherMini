@@ -1,6 +1,6 @@
 {
-  "version": "1.1",
-  "updatemessage_tc": "測試用\n測試第2行",
-  "updatemessage_en": "This is a test message to be displayed \nTest message en line 2",
+  "version": "1.0",
+  "updatemessage_tc": "沒有更新",
+  "updatemessage_en": "No update",
   "firmwareURL": "https://raw.githubusercontent.com/mahbird/InkWeatherMini/refs/heads/main/Update/WeatherMini_OTA_test.bin"
 }
