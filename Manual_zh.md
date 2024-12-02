@@ -1,8 +1,7 @@
 **介面**
 
 
-![info]](images/info.jpg)
-
+<img src="images/info.jpg"></img>
 
 
 
