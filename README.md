@@ -201,7 +201,7 @@ If you notice anything wrong with the code or have any suggestions, just let me 
 
 ********
 
-
+All icons are drawn by mahbird. (a.k.a. the project creator)
 
 <h1>##Credits: </h1>
 
@@ -225,10 +225,12 @@ Font converter: https://rop.nl/truetype2gfx/
 
 
 Data service provider:
-<br>Weather data: https://www.hko.gov.hk/en/weatherAPI/doc/files/HKO_Open_Data_API_Documentation.pdf (according to documentation version 1.2)
+
+Weather data: https://www.hko.gov.hk/en/weatherAPI/doc/files/HKO_Open_Data_API_Documentation.pdf (according to documentation version 1.2)
+
 AQI: https://www.aqhi.gov.hk/psi/dd/hk_aqhiforecast_tc.pdf
+
 NTP: time.nist.gov, pool.ntp.org, stdtime.gov.hk, time.google.com
 
 ##[License](License)
 
-All 
