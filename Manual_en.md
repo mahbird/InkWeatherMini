@@ -50,7 +50,7 @@ On stable connection, this should take 15 seconds or less. Screen will refresh a
 
 **Working LED indicator**
 
-![WorkingLED](Images/WorkingLED.jpg)
+![WorkingLED](Images/workingLED.jpg)
 
 - Short blink (every 0.5s): InkWeatherMini is trying to connect to WiFi
 

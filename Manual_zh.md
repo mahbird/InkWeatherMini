@@ -11,7 +11,7 @@
 
 充電中會亮紅燈，充滿電後亮藍燈
 
-![charging]](Images/charging.jpg)
+![charging](Images/charging.jpg)
 
 **EINK屏刷新中會閃爍數次，屬正常現象**
 
@@ -48,7 +48,7 @@ WiFi穩定時需時約15秒以下，成功取得攻氣後畫面將自動刷新
 
 **工作指示燈:**
 
-![WorkingLED](Images/WorkingLED.jpg)
+![WorkingLED](Images/workingLED.jpg)
 
 - 快閃(0.5s) : InkWeatherMini正在嘗試連接到WIFI
 
