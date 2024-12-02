@@ -17,7 +17,7 @@
 
 **按鍵1為重啟鍵，短按可以取得即時天氣，如畫面正在刷新請勿按**
 
-
+https://github.com/user-attachments/assets/db4f93c9-d7ad-4574-b56d-e51dda1d723f
 
 
 首次設定:
