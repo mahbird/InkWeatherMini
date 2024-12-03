@@ -5,6 +5,10 @@
 **如你已擁有InkWeatherMini，可以前往[中文使用說明](Manual_zh.md)**
 
 
+
+https://github.com/user-attachments/assets/ef22c9ca-abf4-482a-b66f-6ace96d78e5b
+
+
 Table of Content
 
 
