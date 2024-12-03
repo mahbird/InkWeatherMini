@@ -36,7 +36,7 @@ Initial Set Up:
 
 *If you get a notification saying there is no internet connection for this WiFi, please click "Keep using this connection"*
 
-- Enter your WiFi credentials (case sensative), adjust settings to your liking and save.
+- Enter your WiFi credentials (case sensative), adjust settings to your liking and save. Note that only 2.4GHz WiFi band is supported.
 
 
 

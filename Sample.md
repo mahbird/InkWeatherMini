@@ -1,6 +1,6 @@
 這是一批我少量製作的InkWeatherMini，白色磨砂亞克力版，透明亞克力蓋版，18650電池座，配一節18650鋰電池
 
-使用type-c 5ViA充電，如果有需要可以自行取出18650電池更換
+使用type-c 5V1A充電，如果有需要可以自行取出18650電池更換
 
 
 ![info](Images/top.png)
@@ -35,7 +35,7 @@ https://github.com/user-attachments/assets/ef22c9ca-abf4-482a-b66f-6ace96d78e5b
 如果軟件出BUG，請跟我說我會盡快修，如果你沒有摔過也沒有厭到它而它在1年內壞了，你可以拿回給我看看能不能修好/給你退款
 
 (如果你覺得價錢太貴，真的非常抱歉，因為少量製作的不算時間光是算材料成本已經很高)
-
+**只支援2.4GHZ的WIFI**
 
 [English Manual](Manual_en.md)
 
