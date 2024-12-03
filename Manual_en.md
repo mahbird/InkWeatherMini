@@ -1,7 +1,7 @@
 **Information**
 
 
-![info](Images/info.jpg)
+![info](Images/info_en.png)
 
 **Please charge using 5V 1A, QC/ PD is not supported**
 
@@ -10,10 +10,10 @@ When charging, LED will be red; when charging is finished, LED will be blue
 
 ![charging](Images/charging.jpg)
 
-**The Eink Screen will flicker when refreshing, which is normal**
+**The Eink Screen will flicker when refreshing, which is normal** (There are many different models of eink panels, the refreshing behaviour have slight differences)
 
 
-https://github.com/user-attachments/assets/db4f93c9-d7ad-4574-b56d-e51dda1d723f
+
 
 
 **Button 1 is reset key. You can press it anytime to fetch weather immediately. DO NOT press when the screen is refreshing**
@@ -33,6 +33,8 @@ Initial Set Up:
 2. Connect to the WiFi hotspot "InkWeatherMini" with your phone or computer
 
 3. Visit http://192.168.2.26 using your web browser (if page does not load correctly, please use google chrome)
+
+*If you get a notification saying there is no internet connection for this WiFi, please click "Keep using this connection"*
 
 - Enter your WiFi credentials (case sensative), adjust settings to your liking and save.
 

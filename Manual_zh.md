@@ -1,7 +1,7 @@
 **介面**
 
 
-![info](Images/info.jpg)
+![info](Images/info.png)
 
 
 
@@ -13,11 +13,11 @@
 
 ![charging](Images/charging.jpg)
 
-**EINK屏刷新中會閃爍數次，屬正常現象**
+**EINK屏刷新中會閃爍數次，屬正常現象** (市面上有很多不同型號的eink面版，刷新時間和方式會有些分別)
 
 **按鍵1為重啟鍵，短按可以取得即時天氣，如畫面正在刷新請勿按**
 
-https://github.com/user-attachments/assets/db4f93c9-d7ad-4574-b56d-e51dda1d723f
+
 
 
 首次設定:
@@ -33,6 +33,8 @@ https://github.com/user-attachments/assets/db4f93c9-d7ad-4574-b56d-e51dda1d723f
 2. 到你的電腦或手機上WIFI連接設定，搜尋網路，點撃"InkWeatherMini"並連接
 
 3. 在電腦或手機上的瀏覽器，前往 http://192.168.2.26 ， 進入設定頁面 (如在這這步驟遇到問題，建議使用google chrome)
+
+*如在過程中彈出通知表示沒有網路，請按"保持連接"*
 
 - 輸入你的WIFI名稱和密碼 (區分大小寫)，按需求更改其他設定，確定保存後
 
