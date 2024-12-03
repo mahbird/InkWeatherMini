@@ -14,10 +14,9 @@ When charging, LED will be red; when charging is finished, LED will be blue
 
 
 
-
-
 **Button 1 is reset key. You can press it anytime to fetch weather immediately. DO NOT press when the screen is refreshing**
 
+*The device is by design to fetch update at ~:05 minutes past the hour*
 
 Initial Set Up:
 
@@ -36,7 +35,7 @@ Initial Set Up:
 
 *If you get a notification saying there is no internet connection for this WiFi, please click "Keep using this connection"*
 
-- Enter your WiFi credentials (case sensative), adjust settings to your liking and save. Note that only 2.4GHz WiFi band is supported.
+- Enter your WiFi credentials (case sensative, note that only 2.4GHz WiFi band is supported, you need to adjust the relevant settings in your router/ hotspot), adjust other settings to your liking and save. 
 
 
 
