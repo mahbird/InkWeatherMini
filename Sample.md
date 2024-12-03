@@ -34,8 +34,10 @@ https://github.com/user-attachments/assets/ef22c9ca-abf4-482a-b66f-6ace96d78e5b
 
 如果軟件出BUG，請跟我說我會盡快修，如果你沒有摔過也沒有厭到它而它在1年內壞了，你可以拿回給我看看能不能修好/給你退款
 
+有提議也可以跟我說，我可以看看能不能加進去
+
 (如果你覺得價錢太貴，真的非常抱歉，因為少量製作的不算時間光是算材料成本已經很高)
-**只支援2.4GHZ的WIFI**
+**硬件只支援2.4GHz的WIFI，如果的WIFI是5GHz，會需要你修改router/hotspot的設定**
 
 [English Manual](Manual_en.md)
 
