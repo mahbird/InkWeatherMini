@@ -19,7 +19,9 @@
 整機大小(mm)，約: 95(W) x43(H) x40(D) 
 顯示區域 (mm): 29.056 x 66.896
 
+
 https://github.com/user-attachments/assets/ef22c9ca-abf4-482a-b66f-6ace96d78e5b
+
 刷新畫面
 
 
