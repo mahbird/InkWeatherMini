@@ -32,7 +32,6 @@ https://github.com/user-attachments/assets/ef22c9ca-abf4-482a-b66f-6ace96d78e5b
 
 由於手工組裝，難免有瑕疵，不適合完美主意者
 
-售價$120，有意購買可以[FACEBOOK聯絡](https://m.me/mahbird)
 
 如果軟件出BUG，請跟我說我會盡快修，如果你沒有摔過也沒有厭到它而它在1年內壞了，你可以拿回給我看看能不能修好/給你退款
 

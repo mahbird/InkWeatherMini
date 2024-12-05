@@ -88,6 +88,8 @@ Long press 0 if you need to change WiFi credentials, follow the instruction on i
 
 This project is created by mahbird and posted on github. All datas are fetched directly from the providers*. InkWeatherMini will not collect your data. The weather data of the day and your Wifi data is only stored locally in your device.
 
+If you encounter any bugs or have any suggestions, you can contact me here or on[FACEBOOK](https://m.me/mahbird)
+
 
 *api/rss/ntp servers used in this project:
 
