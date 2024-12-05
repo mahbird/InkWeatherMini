@@ -2,8 +2,8 @@ Version 1.01
 - 網頁設定更新，顯示當前版本和使用說明連結
 - 改善重試邏輯
 
-- Update web setting page to show current version and manual links
-- improve retry logic
+- Updated web setting page to show current version and manual links
+- Improved retry logic
 
 Version 1.0
 -原始版本
