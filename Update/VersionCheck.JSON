@@ -1,5 +1,5 @@
 {
-  "version": "1.01t",
+  "version": "1.01",
   "updatemessage_tc": "- 網頁設定更新，顯示當前版本和使用說明連結\n- 改善重試邏輯",
   "updatemessage_en": "- Updated web setting page\n- Improved retry logic",
   "firmwareURL": "https://raw.githubusercontent.com/mahbird/InkWeatherMini/refs/heads/main/Update/WeatherMini_1.01.bin"
