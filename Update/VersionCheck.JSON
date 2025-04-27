@@ -1,6 +1,6 @@
 {
-  "version": "1.01",
-  "updatemessage_tc": "- 網頁設定更新，顯示當前版本和使用說明連結\n- 改善重試邏輯",
-  "updatemessage_en": "- Updated web setting page\n- Improved retry logic",
-  "firmwareURL": "https://raw.githubusercontent.com/mahbird/InkWeatherMini/refs/heads/main/Update/WeatherMini_1.01.bin"
+  "version": "1.02",
+  "updatemessage_tc": "-改善數額處理邏輯\n-改善電源管理",
+  "updatemessage_en": "-Improved data parsing logic\n-Improved battery battery management",
+  "firmwareURL": "https://raw.githubusercontent.com/mahbird/InkWeatherMini/refs/heads/main/Update/WeatherMini_1.02.bin"
 }
