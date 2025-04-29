@@ -466,7 +466,7 @@ void getAQI() {
         
           }
 
-          if (buffer.length() > 64) { 
+          else if (buffer.length() > 64) { 
               buffer.remove(0, buffer.length() - AQIstation.length()-11);
           }
       }
