@@ -1,6 +1,6 @@
 {
   "version": "1.03",
-  "updatemessage_tc": "測試中，請稍後再更新",
-  "updatemessage_en": " Testing, please check update later",
+  "updatemessage_tc": "錯誤修正",
+  "updatemessage_en": "Bug fix",
   "firmwareURL": "https://raw.githubusercontent.com/mahbird/InkWeatherMini/refs/heads/main/Update/InkWeatherMini_1.03.bin"
 }
