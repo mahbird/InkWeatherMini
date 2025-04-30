@@ -428,7 +428,7 @@ void getAQI() {
 
           if (AQIstationIndex != -1 && (AQIstationIndex < buffer.length() - AQIstation.length() - 10)) {
             buffer.remove(0, AQIstationIndex);
-            Serial.println(buffer);
+            //Serial.println(buffer);
 
             int firstColon = buffer.indexOf(" : ");
             int secondColon = buffer.indexOf(" : ", firstColon + 3);
@@ -436,16 +436,14 @@ void getAQI() {
             if (firstColon != -1 && secondColon != -1) {
                 String aqiString = buffer.substring(firstColon + 3, secondColon);
                 AQI = aqiString.toInt();
-                Serial.println("AQI: " + String(AQI));
+                //Serial.println("AQI: " + String(AQI));
                 return; 
             }
             
         
           }
           else if (buffer.length() > 128) { 
-            Serial.printf("Buffer length exceeded: %d. \n Old buffer: %s", buffer.length(), buffer);
-              buffer.remove(0, buffer.length() - AQIstation.length()-11);
-              Serial.printf("Trimmed buffer: %s\n", buffer);
+              buffer.remove(0, buffer.length() - AQIstation.length()-11);            
           }
       }
   } else {
