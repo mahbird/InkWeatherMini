@@ -408,33 +408,6 @@ errorcode = 3;}
 
 
 
-/*
-
-void getAQI(){ 
-http.begin ("https://www.aqhi.gov.hk/epd/ddata/html/out/aqhi_ind_rss_Eng.xml");
-int httpCode = http.GET();
-
-if (httpCode > 0) {
-String result = http.getString();
-
-int removen = result.indexOf(AQIstation);
-result.remove (0, removen+AQIstation.length()+3);
-//Serial.println (result);
-removen = result.indexOf(" : ");
-result.remove(removen, result.length()-removen);
-AQI = result.toInt();
-//Serial.print("AQ:");
-//Serial.println(AQI);
-}
-
-http.end();
-}
-
-*/
-
-
-//new AQI
-
 void getAQI() {
   HTTPClient http;
   http.begin("https://www.aqhi.gov.hk/epd/ddata/html/out/aqhi_ind_rss_Eng.xml");
@@ -451,23 +424,28 @@ void getAQI() {
       while (stream->connected() && stream->available()) {
           char c = stream->read(); 
           buffer += c;
+          int AQIstationIndex = buffer.indexOf(AQIstation);
 
-          if (buffer.indexOf(AQIstation) != -1 && (buffer.indexOf(AQIstation) < buffer.length() - AQIstation.length() - 10)) {
+          if (AQIstationIndex != -1 && (AQIstationIndex < buffer.length() - AQIstation.length() - 10)) {
+            buffer.remove(0, AQIstationIndex);
+            Serial.println(buffer);
+
             int firstColon = buffer.indexOf(" : ");
             int secondColon = buffer.indexOf(" : ", firstColon + 3);
         
             if (firstColon != -1 && secondColon != -1) {
                 String aqiString = buffer.substring(firstColon + 3, secondColon);
                 AQI = aqiString.toInt();
-                //Serial.println("AQI: " + String(AQI));
+                Serial.println("AQI: " + String(AQI));
                 return; 
             }
             
         
           }
-
-          else if (buffer.length() > 64) { 
+          else if (buffer.length() > 128) { 
+            Serial.printf("Buffer length exceeded: %d. \n Old buffer: %s", buffer.length(), buffer);
               buffer.remove(0, buffer.length() - AQIstation.length()-11);
+              Serial.printf("Trimmed buffer: %s\n", buffer);
           }
       }
   } else {
