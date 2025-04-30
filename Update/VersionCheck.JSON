@@ -1,6 +1,4 @@
-{
-  "version": "1.03",
-  "updatemessage_tc": "錯誤修正",
-  "updatemessage_en": "Bug fix",
-  "firmwareURL": "https://raw.githubusercontent.com/mahbird/InkWeatherMini/refs/heads/main/Update/InkWeatherMini_1.03.bin"
-}
+  "version": "1.02",
+  "updatemessage_tc": "-改善數額處理邏輯\n-改善電源管理",
+  "updatemessage_en": "-Improved data parsing logic\n-Improved battery battery management",
+  "firmwareURL": "https://raw.githubusercontent.com/mahbird/InkWeatherMini/refs/heads/main/Update/WeatherMini_1.02.bin"
