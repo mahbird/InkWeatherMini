@@ -443,11 +443,11 @@ void getAQI() {
         
           }
           else if (buffer.length() > 128) { 
-              buffer.remove(0, buffer.length() - AQIstation.length()-11);            
+              buffer.remove(0, buffer.length() - AQIstation.length()-11);
           }
       }
   } else {
-      Serial.println("HTTP GET failed (getAQI), error: " + String(httpCode));
+      //Serial.println("HTTP GET failed (getAQI), error: " + String(httpCode));
       errorcode = 3;
   }
   http.end();
