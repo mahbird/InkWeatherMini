@@ -29,7 +29,7 @@ RTC_DATA_ATTR int errorcount = 0;
 
 // Common function/ declaration
 Preferences pref;
-HTTPClient http;
+
 
 void wifiConnect()
 {

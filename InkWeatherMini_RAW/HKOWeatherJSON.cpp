@@ -159,6 +159,7 @@ errorcode = 3;}
 
 
 void getCurrentWeather(){ // Get current weather data
+  HTTPClient http;
 http.begin (baseURL+cwrq);
 int httpCode = http.GET();
 
@@ -252,6 +253,7 @@ else {errorcode = 3;
 
 
 void getVisibility(){ // Get current weather data visibility
+  HTTPClient http;
 http.begin (baseURL2 + vbrq);
 int httpCode = http.GET();
 
@@ -311,6 +313,7 @@ else {errorcode = 3;
 
 void getSRS() { // Get Sunset and Sunrise
 if (updateSRS){
+  HTTPClient http;
 char srsrq [60];
 snprintf (srsrq, sizeof(srsrq), "SRS&lang=en&rformat=json&year=%d&month=%d&day=%d", nowyear, nowmonth, nowday);
 http.begin (baseURL2 + srsrq);
@@ -360,6 +363,7 @@ else {errorcode = 3;
 
 
 void getwarning(){
+  HTTPClient http;
 http.begin (baseURL + warnrq);
 int httpCode = http.GET();
 
@@ -471,9 +475,6 @@ nowhour = tmstruct.tm_hour;
 nowminute = tmstruct.tm_min;
 nowsecond = tmstruct.tm_sec;
 nowwday = tmstruct.tm_wday;
-//snprintf (srsrq, sizeof(srsrq), "SRS&lang=en&rformat=json&year=%d&month=%d&day=%d", nowyear, nowmonth, nowday); //moved to getSRS()
-//if (nowday.length()==1){nowday = "0"+nowday;} // something I did for displaying but probably not needed keeping just in case String(nowday)
-//if (nowmonth.length()==1){nowmonth = "0"+nowmonth;}
 errorcode = 0;
  //Serial.printf("Now is %02d:%02d - %d/%d/%d\n", nowhour, nowminute, nowday, nowmonth, nowyear);
             return;

@@ -13,7 +13,6 @@
 #include "drawfunctions.h"
 
 extern Preferences pref;
-extern HTTPClient http;
 
 // For JSON weather
 
