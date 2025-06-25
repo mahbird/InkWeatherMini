@@ -3,7 +3,9 @@
 
 ![info](Images/info_en.png)
 
-**Please charge using 5V 1A, QC/ PD is not supported**
+**Please charge using 5V 1A (if using TP4056 module), QC/ PD is not supported**
+
+Or as rated by your battery charging IC/ modules if you are using others!
 
 You can use any usb charger that are rated at 5V, that is rated at 1A or higher, or just your computer's USB port.
 When charging, LED will be red; when charging is finished, LED will be blue
@@ -14,7 +16,7 @@ When charging, LED will be red; when charging is finished, LED will be blue
 
 
 
-**Button 1 is reset key. You can press it anytime to fetch weather immediately. DO NOT press when the screen is refreshing**
+**Button I is reset key. You can press it anytime to fetch weather immediately. DO NOT press when the screen is refreshing**
 
 *The device is by design to fetch update at ~:05 minutes past the hour*
 
