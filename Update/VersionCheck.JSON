@@ -1,6 +1,6 @@
 {
   "version": "1.10",
-  "updatemessage_tc": "**重要更新**\n-左下圖示可以自訂 (測試版) \n-更新AQI請求方法 \n-修改天氣圖示91+92",
-  "updatemessage_en": "**Critical Update**\n-Added option to customize bottom left icon (experimental)\n-Updated AQI fetching\n-Updated weather icon 91 and 92",
-  "firmwareURL": "https://raw.githubusercontent.com/mahbird/InkWeatherMini/refs/heads/main/Update/firmware.bin"
+  "updatemessage_tc": "**重要更新**\n-AQI請求方法\n-左下圖示可以自訂 (測試版) \n-修改天氣圖示91+92",
+  "updatemessage_en": "**Critical Update**\n-Updated AQI fetching\n-Added option to customize bottom left icon (experimental)\n-Updated weather icon 91 and 92",
+  "firmwareURL": "https://raw.githubusercontent.com/mahbird/InkWeatherMini/refs/heads/main/Update/WeatherMini_1.10.bin"
 }
