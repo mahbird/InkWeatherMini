@@ -1,9 +1,10 @@
-Version 1.10
+Version 1.1.0
 -左下圖示可以自訂 (測試版)
 -更新AQI請求方法
+-修改天氣圖示91+92
 
--Add option to customize bottom left icon (experimental)
--Update AQI fetching to work with new AQI RSS
+-Added option to customize bottom left icon (experimental)
+-Updated AQI fetching to work with new AQI RSS
 
 Version 1.02
 - 改善數額處理邏輯
