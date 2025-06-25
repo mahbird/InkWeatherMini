@@ -2,9 +2,12 @@
 
 ## License Grant
 
-You are granted a non-exclusive, non-transferable, revocable license to use, adapt or modify this software for personal use.
+You are granted a non-exclusive, non-transferable, revocable license to use this software for personal, non-commercial purposes.
+
 
 ## Restrictions
+
+You may not modify, adapt, or create derivative works based on this software for redistribution.
 
 You may not redistribute, sell, or share copies of this software, in whole or in part, with or without modification, unless you have obtained prior written permission from the author.
 
@@ -21,5 +24,3 @@ This project uses dependencies from other libraries, and details of service prov
 ## Acceptance
 
 By using this project, you agree to abide by the terms of this license.
-
-

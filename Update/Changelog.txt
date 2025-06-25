@@ -1,3 +1,10 @@
+Version 1.10
+-左下圖示可以自訂 (測試版)
+-更新AQI請求方法
+
+-Add option to customize bottom left icon (experimental)
+-Update AQI fetching to work with new AQI RSS
+
 Version 1.02
 - 改善數額處理邏輯
 - 改善電源管理
