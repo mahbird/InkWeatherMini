@@ -1,10 +1,21 @@
-Version 1.1.0
+Version 1.11
+如已更新1.10可以不用更新
+-修復SOFTAP下不能改圖示的BUG
+
+If you have already updated to V1.10, this update is minor
+-Fix icon customization not working in softAP mode
+
+
+** Version 1.10 **
+**重要更新**
 -左下圖示可以自訂 (測試版)
 -更新AQI請求方法
 -修改天氣圖示91+92
 
+** Important Update **
 -Added option to customize bottom left icon (experimental)
 -Updated AQI fetching to work with new AQI RSS
+- Updated weather icon 91 and 92
 
 Version 1.02
 - 改善數額處理邏輯

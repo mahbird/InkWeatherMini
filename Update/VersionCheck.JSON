@@ -1,6 +1,6 @@
 {
-  "version": "1.10",
-  "updatemessage_tc": "**重要更新**\n-AQI請求方法\n-左下圖示可以自訂 (測試版) \n-修改天氣圖示91+92",
-  "updatemessage_en": "**Critical Update**\n-Updated AQI fetching\n-Added option to customize bottom left icon (experimental)\n-Updated weather icon 91 and 92",
-  "firmwareURL": "https://raw.githubusercontent.com/mahbird/InkWeatherMini/refs/heads/main/Update/WeatherMini_1.10.bin"
+  "version": "1.11",
+  "updatemessage_tc": "如已更新1.10此版本非重要更新\n-修復SOFTAP下不能改圖示的BUG",
+  "updatemessage_en": "If you have already updated to V1.10, this update is minor\n-Fix icon customization not working in softAP mode",
+  "firmwareURL": "https://raw.githubusercontent.com/mahbird/InkWeatherMini/refs/heads/main/Update/WeatherMini_1.11.bin"
 }
